@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     width: 100vw;
     height: 100vh; 
@@ -13,6 +14,8 @@ body{
     color: #fff;
     width: 100%;
     height: 100%;
+    margin: 0;
+
 }
 
 .planets-area{
@@ -20,9 +23,21 @@ body{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 950px;
     position: relative;
+    margin: 0;
+}
+
+.space-background{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        height: 1px;
+        width: 1px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: -24vw -44vh 2px 2px #fff,38vw -4vh 2px 3px #fff,-20vw -48vh 1px 2px #fff,-39vw 38vh 3px 1px #fff,-42vw -11vh 0px 3px #fff,12vw 15vh 3px 3px #fff,42vw 6vh 3px 2px #fff,-8vw 9vh 0px 2px #fff,34vw -38vh 1px 0px #fff,-17vw 45vh 3px 1px #fff,22vw -36vh 3px 2px #fff,-42vw 1vh 1px 0px #fff,-22vw 5vh 2px 0px #fff,-30vw 35vh 3px 0px #fff,-10vw -65vh 2px 0px #fff,-12vw 12vh 3px 1px #fff,-5vw -32vh 2px 3px #fff,-10vw -10vh 2px 2px #fff,-30vw 30vh 2px 1px #fff,-32vw -20vh 3px 2px #fff;
 }
 
 .info-area{
@@ -30,12 +45,74 @@ body{
     display: none;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    background-color: #ffd029;
+    width: 100%;
+    height: 100%;
+    margin: 0;
     align-items: center;
     padding: 50px 250px 250px 250px;
+}
+
+.info-article{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 200px;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.09em;
+}
+
+.main-h1{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 100%;
+    margin-left: 1300px;
+    margin-bottom: 0;
+    margin-top: 5px;
+    position: fixed;
+    top: 100px;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.09em;
+}
+h2{
+    color:#FFD029;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.6em;
+}
+
+.main-h2{
+    color:#FFD029;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    margin-left: 1300px;
+    margin-bottom: 0;
+    margin-top: 0;
+    position: fixed;
+    top: 170px;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.6em;
+}
+
+p{
+    font-family: 'Fira Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 170%;
 }
 
 .Solen{
@@ -44,10 +121,9 @@ body{
     height: 100%;
     border-radius: 50%;
     position: absolute;
-    margin-left: -1100px;
-    z-index: 10;
+    margin-left: -1150px;
     cursor: pointer;
-    box-shadow: rgb(255 208 41 / 20%) 0px 0px 250px;
+    box-shadow: rgb(255 208 41 / 60%) 10px 0px 150px;
 }
 
 .Merkurius{
@@ -162,7 +238,6 @@ body{
     margin: auto;
     width: 50px;
     height: 50px;
-    margin-top: 100px;
     cursor: pointer;
 }
   
@@ -217,3 +292,13 @@ label{
     opacity: 1;
 }
   
+
+.planet-display {
+    width: 1278px;
+    height: 100%;
+    border-radius: 50%;
+    position: absolute;
+    margin-left: -1350px;
+    top: 15px;
+    box-shadow: rgb(255 208 41 / 60%) 0px 0px 200px;
+}

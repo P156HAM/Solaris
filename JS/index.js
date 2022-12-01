@@ -49,7 +49,7 @@ function createPlanetsElement(data) {
 
 function createPlanetsInformation() {
     const sections = document.querySelectorAll('section')
-    sections.forEach((section, index) => {
+    sections.forEach((section) => {
             let planetName = section.getAttribute('class')
             let planetLatinName = section.getAttribute('latin-name')
             let planetDesc = section.getAttribute('text')
@@ -72,7 +72,7 @@ function createPlanetsInformation() {
             <h2> ${planetLatinName} </h2>
             <p> ${planetDesc} </p>
             <hr>
-            <section>
+            <section class=info-article>
                 <article>
                     <h3>OMKRETS</h3>
                     <p>${planetCircumference}</p>
@@ -92,7 +92,8 @@ function createPlanetsInformation() {
             </section>
             <hr>
             <h2>MÅNAR</h2>
-            <p>${planetmoons}</p>`
+            <p>${planetmoons}</p>
+            <section class='planet-display'></section>`
             wrapper.appendChild(infoArea);
     })
     displayPlanetInformation()
@@ -105,6 +106,10 @@ function displayPlanetInformation() {
         section.addEventListener('click', (event) => {
         const planetName = event.target.className
         document.querySelector(`[data-name=${planetName}]`).style.display = ('block');
+        const planetCss = getComputedStyle(document.querySelector(`.${planetName}`));
+        console.log(planetCss)
+        planetColor = planetCss.backgroundColor;
+        document.querySelector(`[data-name=${planetName}] .planet-display`).style.background = planetColor;
         })
     })
 
@@ -113,6 +118,7 @@ function displayPlanetInformation() {
     closeMarks.forEach((mark) => {
         mark.addEventListener('click', () => {
         infoAreas.forEach((area) => {
+
             area.style.display = 'none';
         })
         })
