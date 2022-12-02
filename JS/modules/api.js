@@ -16,7 +16,6 @@ async function getAllPlanets() {
         }
     })
     const data = await response.json(); 
-    console.log(data);
     createPlanetsElement(data)
 }
 

@@ -6,7 +6,6 @@ import {displayPlanetInformation} from '../modules/display.js'
 
 function createPlanetsElement(data) {
     const allPlanetsArray = Object.values(data);
-    console.log(allPlanetsArray);
     const planetsDisplayArea = document.querySelector('.planets-area');
     for (let i=0; i<allPlanetsArray.length; i++) {
         planets = allPlanetsArray[i];

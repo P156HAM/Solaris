@@ -8,7 +8,6 @@ function displayPlanetInformation() {
         const planetName = event.target.className
         document.querySelector(`[data-name=${planetName}]`).style.display = ('block');
         const planetCss = getComputedStyle(document.querySelector(`.${planetName}`));
-        console.log(planetCss)
         planetColor = planetCss.backgroundColor;
         document.querySelector(`[data-name=${planetName}] .planet-display`).style.background = planetColor;
         })
